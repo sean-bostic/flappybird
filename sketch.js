@@ -1,5 +1,6 @@
 var bird;
 var pipes = [];
+
 function setup() {
   createCanvas(400, 600);
   bird = new Bird();
@@ -16,7 +17,11 @@ function draw() {
 
   bird.update();
   bird.show();
+  //Daniel Shiffman figured this part out
+  if (frameCount % 100 == 0) {
   pipes.push(new Pipe())
+  	
+  }
 }
 
 function keyPressed() {
