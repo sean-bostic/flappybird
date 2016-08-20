@@ -1,3 +1,5 @@
+//resources from Coding Rainbow 
+
 function Bird() {
 
 	this.y = height/2;
