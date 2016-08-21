@@ -1,11 +1,12 @@
 function Pipe() {
- 
+
   this.top = random(height/2);
   this.bottom = random(height/2);
   this.x = width;
   this.w = 25;
   this.speed = 2.2;
 
+  //make a scoring function based upon when pipes are hit.
   this.show = function() {
     fill(255);
     rect(this.x, 0, this.w, this.top);
