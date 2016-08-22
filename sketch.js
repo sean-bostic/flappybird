@@ -1,5 +1,6 @@
 var bird;
 var pipes = [];
+var score = 0;
 
 function setup() {
   createCanvas(400, 600);
@@ -15,7 +16,13 @@ function draw() {
     pipes[i].update();
 
     //make logic when each pipe is hit by the bird?
-    pipes[i].hits();
+    if (pipes[i].hits(bird)) {
+      endGame();
+    }
+    else if (!pipes[i].hits(bird)) {
+      score++;
+      console.log(score);
+    }
   }
 
   bird.update();
@@ -25,6 +32,15 @@ function draw() {
   pipes.push(new Pipe())
 
   }
+}
+
+function endGame(){
+  console.log("End the game here");
+  console.log(score);
+  bird.x = 0;
+  bird.speed = 0;
+  pipes[i].speed = 0;
+  pipes[i].x = 0;
 }
 
 function keyPressed() {
