@@ -17,12 +17,10 @@ function draw() {
 
     //make logic when each pipe is hit by the bird?
     if (pipes[i].hits(bird)) {
+      score = score - 1;
       endGame();
     }
-    else if (!pipes[i].hits(bird)) {
-      score++;
-      console.log(score);
-    }
+
   }
 
   bird.update();
