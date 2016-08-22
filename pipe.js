@@ -7,6 +7,9 @@ function Pipe() {
   this.speed = 2.2;
 
   //make a scoring function based upon when pipes are hit.
+  this.hits = function(bird){
+    //make logic to tell when bird.x and bird.y === pipes?
+  }
   this.show = function() {
     fill(255);
     rect(this.x, 0, this.w, this.top);
